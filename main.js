@@ -1,7 +1,4 @@
-function clickbutton() {
-    alert("You clicked on one")
+function clickbutton(x) {
+    alert("You clicked on " + x)
 }
-
-function twobuttonClicked() {
-    alert("You clicked on two")
-}
+document.getElementById("TheResult")(x);
