@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C:\\Users\\rocka840\\Documents\\3TPIFE\\CLISS\\Calculator\\html.html",
+            "url": "C:\\Users\\rocka840\\Documents\\3TPIFE\\CLISS\\9th-December\\events.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
