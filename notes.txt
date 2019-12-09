@@ -1,1 +1,4 @@
 first build calculator in css
+
+TWO OPTIONS for finding out that the + was pressed OR NOT
+1.Get the + button, check its classname and see if it contains the class turnon

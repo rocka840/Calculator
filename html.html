@@ -4,8 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <title>Calculator</title>
-    <script src='main.js'></script>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
 
     <style>
         #result {
@@ -20,24 +19,28 @@
             width: 25px;
             height: 25px;
         }
+        
+        .turnon {
+            background-color: lightcoral;
+        }
     </style>
 </head>
 
 <body>
     <div>
-        <input id="result">
+        <input id="result" placeholder="0">
     </div>
     <div>
         <button onClick="clickbutton(1)">1</button>
         <button onClick="clickbutton(2)">2</button>
         <button onClick="clickbutton(3)">3</button>
-        <button class="signs">+</button>
+        <button id='plusBtn' class="signs" onClick="plus()">+</button>
     </div>
     <div>
         <button onClick="clickbutton(4)">4</button>
         <button onClick="clickbutton(5)">5</button>
         <button onClick="clickbutton(6)">6</button>
-        <button class="signs">-</button>
+        <button id='minusBtn' class="signs" class="turnon" onClick="clickbutton(minus)">-</button>
     </div>
     <div>
         <button onClick="clickbutton(7)">7</button>
@@ -47,10 +50,17 @@
     <div>
         <button id="zero" onClick="clickbutton(0)">0</button>
     </div>
+    <div>
+        <button id="zero" onClick="reset();">Clear</button>
+    </div>
 
 
 
 
 </body>
+
+<footer>
+    <script src='main.js'></script>
+</footer>
 
 </html>
