@@ -1,25 +1,55 @@
-var cache = 0;
+var cache = null;
 
-function clickbutton(x) { //alert("You clicked on " + x)
+function addToMemory(someThing) {
+    document.getElementById("memory").innerHTML = someThing;
+}
+
+function clickbutton(x) {
 
     document.getElementById("result").value += x;
 
-    if (document.getElementById("plusBtn").classList.contains("turnon")) { // Check if button contains the class "turnon"
-        cache = document.getElementById("result") // If true, the button needs to be disabled and is turned off                              
-        document.getElementById("plusBtn").classList.remove("turnon"); // removing the class turns the button off
+    if (document.getElementById("plusBtn").classList.contains("turnon")
+        (document.getElementById("minusBtn").classList.contains("turnon"))
+    ) {
+        resetDisplay();
+        cache = document.getElementById("result").value;
+        document.getElementById("result").value = "";
     }
+    document.getElementById("result").value += x;
 }
 
 function reset() {
     document.getElementById("result").value = "";
-    cache = 0;
-    document.getElementById("result").value = resal;
+    cache = null;
+
+    resetDisplay();
 }
 
 function plus() {
-    var resal = Number(document.getElementById("result").value);
+    var res = Number(document.getElementById("result").value);
     result += Number(cache);
-    document.getElementById("result").value = resal;
+    document.getElementById("result").value = res;
+
+    resetDisplay();
     document.getElementById("plusBtn").classList.add("turnon");
 
+
+}
+
+function minus() {
+
+    if (cache != null) {
+        var res = Number(document.getElementById("result").value);
+        result = cache - result;
+        document.getElementById("result").value = res;
+    }
+
+    resetDisplay();
+    document.getElementById("minusBtn").classList.add("turnon");
+}
+
+function resetDisplay() {
+
+    document.getElementById("plusBtn").classList.remove("turnon");
+    document.getElementById("minusBtn").classList.remove("turnon");
 }
